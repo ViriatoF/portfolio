@@ -1,3 +1,32 @@
+.main {
+  flex-direction: column;
+  gap: 15em;
+}
+
+.main>section {
+  min-height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 5em 2em ;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.technos {
+  width: 40vw;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5em;
+}
+
+
+
 /* .page {
   --gray-rgb: 0, 0, 0;
   --gray-alpha-200: rgba(var(--gray-rgb), 0.08);

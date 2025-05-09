@@ -1,0 +1,31 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav {
+  padding: 1em 2em;
+  border: 2px solid white;
+  border-radius: 8px;
+  margin: 2em 0;
+  box-shadow:
+      0 0 1px green,
+      0 0 5px green,
+      0 0 10px green,
+      0 0 20px green,
+      0 0 30px green,
+      0 0 92px green,
+      0 0 102px green,
+      0 0 151px green;
+}
+
+.navItems {
+  display: flex;
+  gap: 2em;
+  & li a{
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+}
