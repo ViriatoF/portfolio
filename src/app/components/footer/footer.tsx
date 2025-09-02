@@ -1,5 +1,5 @@
 import { FaRegCopyright } from "react-icons/fa6";
-import styles from "@/components/footer.module.css";
+import styles from "@/components/footer/footer.module.css";
 
 export default function Footer() {
 	const year = new Date().getFullYear();

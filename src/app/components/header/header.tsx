@@ -1,4 +1,4 @@
-import styles from "@/components/header.module.css";
+import styles from "@/components/header/header.module.css";
 import Link from "next/link";
 import { HiHome, HiMiniUser } from "react-icons/hi2";
 import { MdOutlineWorkOutline } from "react-icons/md";
