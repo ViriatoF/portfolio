@@ -34,11 +34,11 @@
 
 .brand {
   & svg {
-    color: var(--foreground);
+    color: var(--button);
     transition: 0.5s;
   }
   & svg:hover {
-    color: var(--border);
+    color: var(--button-hover);
   }
 }
 
@@ -58,7 +58,7 @@
   padding: 8px 10px;
   position: relative;
   display: inline-block;
-  color: var(--foreground);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -83,7 +83,7 @@
   background: none;
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1em;
+  padding: 0.5em;
   color: var(--fg);
 }
 
@@ -105,7 +105,11 @@
 
   .burger {
     display: block;
-    color: var(--foreground);
+    color: var(--text);
+    & svg {
+      height: 2em;
+      width: 2em;
+    }
   }
 
   .menu {
@@ -115,7 +119,7 @@
     flex-direction: column;
     border: 1px solid var(--border);
     border-radius: 8px;
-    background: rgba(13, 60, 72, 0.8);
+    background: rgba(13, 60, 72, 0.9);
     padding: 8px;
     display: none;
     width: 10em;
@@ -127,5 +131,16 @@
 
   .menuOpen {
     display: flex;
+    width: 93vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .menu li a {
+    color: var(--text);
   }
 }

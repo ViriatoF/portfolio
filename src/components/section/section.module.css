@@ -11,7 +11,7 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   top: 10em;
   left: 6em;
-  background-color: var(--foreground);
+  background-color: var(--text);
   color: var(--background);
   padding: 0.2em 2em;
   font-weight: 100;

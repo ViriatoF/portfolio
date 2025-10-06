@@ -2,10 +2,10 @@
 import styles from "../header/header.module.css";
 import { HiHome, HiMiniUser } from "react-icons/hi2";
 import { MdOutlineWorkOutline } from "react-icons/md";
-import { GrContact } from "react-icons/gr";
 import { useEffect, useState } from "react";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoClose } from "react-icons/io5";
+import Link from "next/link";
 
 const links = [
 	{ 
@@ -38,14 +38,7 @@ export default function Header() {
 	const [open, setOpen] = useState(false);
 
 	useEffect(()=>{
-
-		if(!open) return;
-
-    const close = ()=> setOpen(false);
-		setTimeout(()=> {
-			setOpen(false);
-			setOpen(true)
-		},500)
+	const close = ()=> setOpen(false);
     window.addEventListener('hashchange', close);
     return ()=> window.removeEventListener('hashchange', close);
   },[]);
@@ -63,9 +56,9 @@ export default function Header() {
         <ul id="menu" className={`${styles.menu} ${open? styles.menuOpen: ''}`}>
           {links.map(l=> (
             <li key={l.href}>
-              <a href={l.href} aria-current={l.href.slice(1)?'page':undefined}>
+              <Link href={l.href} aria-current={l.href.slice(1)?'page':undefined} onClick={()=>setTimeout(()=>{setOpen(!open)},800)}>
                 {l.label}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

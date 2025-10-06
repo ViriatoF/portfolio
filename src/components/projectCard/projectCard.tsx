@@ -12,7 +12,7 @@ export default function ProjectCard({ project } : { project: _Project }) {
     <article className={styles.article}>
       <Image
         src={project.image}
-        alt={"Image capture from the Good-Vibes website "}
+        alt={`Image capture from the ${project.title} website`}
         width={540}
         height={300}
         />

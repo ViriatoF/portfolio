@@ -34,7 +34,7 @@
 
 .btn {
   padding: 0.5em 2em;
-  color: var(--foreground);
+  color: var(--text);
   border: 1px solid var(--border);
   border-radius: 8px;
   display: inline-block;
@@ -72,5 +72,11 @@
       width: 45%;
       height: 4em;
     }
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .home {
+    background-color: var(--card);
   }
 }

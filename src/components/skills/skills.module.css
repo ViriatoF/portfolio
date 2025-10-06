@@ -6,6 +6,7 @@
   padding: 2em;
   border: 1px solid var(--border);
   border-radius: 0 8px;
+  background-color: var(--card);
 }
 
 .skillsContainer {

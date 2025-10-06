@@ -1,11 +1,12 @@
 :root {
-  --foreground: #0d3c48;
+  --text: #0d3c48;
+  --links: #107d98;
   --background: #fafdfe;
   --border: #3db9cf;
-  --card: #0f1216;
-  --font-color-light: #0d3c48;
-  --button: #02606f;
+  --card: #f2fafb;
+  --button: #0797b9;
   --button-hover: #3db9cf;
+  --labels: #b5e9f0;
 }
 
 *,
@@ -57,10 +58,6 @@ img {
   height: auto;
 }
 
-/* a {
-  text-decoration: none;
-} */
-
 h1,
 h2,
 h3 {
@@ -99,9 +96,8 @@ mark {
     text-align: center;
   }
 
-  span {
+  h2 {
     font-size: 1.5rem;
-    text-align: center;
   }
 
   h3 {
@@ -110,6 +106,11 @@ mark {
 
   h4 {
     font-size: 1.125rem;
+  }
+
+  span {
+    font-size: 1.5rem;
+    text-align: center;
   }
 
   mark {
@@ -126,7 +127,17 @@ mark {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --text: #b6ecf7;
+    --links: #4ccce6;
+    --background: #0b161a;
+    --border: #04546c;
+    --card: #101b20;
+    --button: #23afd0;
+    --button-hover: #00a2c7;
+    --labels: #004558;
+  }
+  body {
+    background-color: var(--background);
+    color: var(--text);
   }
 }
