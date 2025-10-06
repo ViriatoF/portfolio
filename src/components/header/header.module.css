@@ -1,0 +1,131 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 1em;
+  z-index: 50;
+  width: 100vw;
+  height: 5em;
+}
+
+.nav {
+  padding: 1em 2em;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  margin: 2em 0;
+  backdrop-filter: saturate(140%) blur(8px);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navItems {
+  display: flex;
+  gap: 2em;
+  & li a {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5em;
+  }
+}
+
+.brand {
+  & svg {
+    color: var(--foreground);
+    transition: 0.5s;
+  }
+  & svg:hover {
+    color: var(--border);
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul {
+  padding: 1em;
+}
+
+.menu a {
+  padding: 8px 10px;
+  position: relative;
+  display: inline-block;
+  color: var(--foreground);
+  text-decoration: none;
+}
+
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.menu a:hover::after {
+  color: var(--button);
+  border-bottom: solid 2px var(--button);
+  width: 100%;
+}
+
+.burger {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1em;
+  color: var(--fg);
+}
+
+@media (max-width: 720px) {
+  .header {
+    justify-content: space-between;
+    align-items: center;
+    height: 6em;
+    gap: 13em;
+  }
+
+  .nav {
+    border: none;
+    flex-direction: column;
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+  }
+
+  .burger {
+    display: block;
+    color: var(--foreground);
+  }
+
+  .menu {
+    position: absolute;
+    top: 3em;
+    right: 0.1em;
+    flex-direction: column;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    background: rgba(13, 60, 72, 0.8);
+    padding: 8px;
+    display: none;
+    width: 10em;
+    align-items: end;
+    & li a {
+      color: var(--background);
+    }
+  }
+
+  .menuOpen {
+    display: flex;
+  }
+}

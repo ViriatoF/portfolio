@@ -1,0 +1,33 @@
+.sectionHeader {
+  position: sticky;
+  top: 10em;
+  left: 10em;
+  width: fit-content;
+}
+
+.title {
+  border-radius: 8px;
+  position: sticky;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  top: 10em;
+  left: 6em;
+  background-color: var(--foreground);
+  color: var(--background);
+  padding: 0.2em 2em;
+  font-weight: 100;
+}
+
+@media (max-width: 720px) {
+  .sectionHeader {
+    width: 100%;
+    & .title {
+      justify-content: center;
+      top: -1.6em;
+      left: 1.5em;
+      padding: 0.5em 1em;
+      width: 100%;
+      text-align: center;
+      margin: auto;
+    }
+  }
+}

@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import { Roboto, Permanent_Marker } from "next/font/google";
 import "./globals.css";
-import Header from "./components/header/header";
-import Footer from "./components/footer/footer";
 
 const roboto = Roboto({
 	variable: "--font-roboto",
@@ -16,9 +14,13 @@ const marker = Permanent_Marker({
 });
 
 export const metadata: Metadata = {
-	title: "Viriato FERREIRA",
+	title: "Viriato FERREIRA - Front-end developper",
 	description:
-		"Viriato FERREIRA portfolio, french front-end developper based in Nantes, LA, France",
+		"Viriato FERREIRA portfolio one page, french front-end developper based in Nantes, LA, France",
+		openGraph:{
+			title:"Viriato FERREIRA - Front-end developper",
+			type:"website"
+		}
 };
 
 export default function RootLayout({
@@ -27,11 +29,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en">
+		<html lang="fr">
 			<body className={`${roboto.variable} ${marker.variable}`}>
-				<Header />
+				
 				{children}
-				<Footer />
+				
 			</body>
 		</html>
 	);

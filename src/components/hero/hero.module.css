@@ -1,0 +1,76 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding: 2em 3em;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  max-width: 100vw;
+  & section:first-of-type {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+
+    & img {
+      width: 12em;
+      height: 12em;
+      border-radius: 50%;
+      border: 2px solid var(--border);
+    }
+  }
+}
+
+#heroline {
+  display: flex;
+  flex-direction: column;
+}
+
+.socialButtons {
+  display: flex;
+  gap: 1.5em;
+  margin: 1.3em auto;
+}
+
+.btn {
+  padding: 0.5em 2em;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: inline-block;
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--button-hover);
+  color: var(--background);
+  border: 1px solid var(--button-hover);
+}
+
+@media (max-width: 720px) {
+  .home {
+    max-width: 100%;
+    padding: 1em;
+    & section:first-of-type {
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .socialButtons {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    & .btn {
+      width: 45%;
+      height: 4em;
+    }
+  }
+}

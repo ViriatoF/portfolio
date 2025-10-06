@@ -1,0 +1,31 @@
+.about {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 2em;
+  border: 1px solid var(--border);
+  & p {
+    width: 80%;
+    text-align: center;
+    margin: auto;
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+}
+
+@media (max-width: 720px) {
+  .about {
+    width: 95%;
+    padding: 0.5em;
+    & p {
+      margin: 0;
+      width: 100%;
+    }
+  }
+}

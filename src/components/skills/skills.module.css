@@ -1,0 +1,56 @@
+.skills {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 2em;
+  border: 1px solid var(--border);
+  border-radius: 0 8px;
+}
+
+.skillsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.front,
+.back,
+.utils,
+.bdd,
+.certifs {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2em;
+  & figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    & img {
+      height: 5em;
+      width: 5em;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .skills {
+    width: 95%;
+    padding: 0.5em;
+  }
+
+  .front,
+  .back,
+  .utils,
+  .bdd,
+  .certifs {
+    flex-direction: column;
+  }
+}

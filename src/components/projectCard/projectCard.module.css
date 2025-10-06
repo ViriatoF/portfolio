@@ -1,0 +1,64 @@
+.article {
+  border: 1px solid var(--border);
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  gap: 1em;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  & img {
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    height: 80%;
+  }
+}
+
+.article section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  & ul {
+    display: flex;
+    gap: 1em;
+    padding: 0.5em;
+    & li {
+      font-size: 0.8em;
+      background: var(--border);
+      border-radius: 8px;
+      padding: 0.5em;
+      color: var(--background);
+    }
+  }
+  & header {
+    justify-content: center;
+  }
+  & footer {
+    justify-content: flex-end;
+    padding: 0 1em 0.5em;
+    & a {
+      color: var(--foreground);
+      transition: 0.5s;
+      & svg {
+        width: 2em;
+        height: 2em;
+      }
+    }
+    & a:hover {
+      color: var(--border);
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .article {
+    width: 95%;
+  }
+
+  .article section ul {
+    flex-wrap: wrap;
+    gap: 0.5em;
+  }
+}

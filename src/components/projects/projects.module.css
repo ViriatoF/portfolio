@@ -1,0 +1,23 @@
+.projects {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  gap: 5em;
+  padding: 2em;
+  border: 1px solid var(--border);
+  border-radius: 0 8px;
+}
+
+.projectsContainer {
+  display: flex;
+  gap: 2em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media (max-width: 720px) {
+  .projects {
+    width: 95%;
+    padding: 0.5em;
+  }
+}
