@@ -27,7 +27,9 @@ export default function About() {
       <ul className={styles.list}>
         <li>Quand suis-je disponible?  <span className="reveal"> ASAP</span></li>
         <li>Ce que j'aimerais faire ? </li>
-        <li>Développement Front-End (ou Back-end), ReactJS, NextJS, Wordpress ou tout autre CMS .</li>
+        <li>Développement Front-End (ou Back-end).</li>
+        <li>ReactJS, NextJS, Wordpress ou tout autre CMS.</li>
+        <li>Travailler l'accessibilité, l'ergonomie, le SEO...</li>
         <li>Participer à de petits projets, de grands projets... de petits projets qui deviendront de grands projets</li>
       </ul>
     </Section>

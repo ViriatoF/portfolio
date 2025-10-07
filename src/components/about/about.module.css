@@ -21,16 +21,22 @@
   width: 70%;
   margin: auto;
   & div {
-    border: 2px solid var(--border);
+    background: var(--background);
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 1em;
     text-align: center;
     width: 45%;
     margin-right: 15em;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    & a {
+      text-decoration: none;
+      color: var(--links);
+    }
   }
   & div:nth-child(2n) {
     margin-left: 40em;
-    border: 2px solid var(--text);
+    border: 1px solid var(--text);
   }
 }
 
@@ -48,6 +54,17 @@
     & p {
       margin: 0;
       width: 100%;
+    }
+  }
+
+  .about section:last-child {
+    width: 100%;
+    & div {
+      width: 70%;
+      margin-right: 5em;
+    }
+    & div:nth-child(2n) {
+      margin-left: 10em;
     }
   }
 }
