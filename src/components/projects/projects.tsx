@@ -5,7 +5,7 @@ import styles from "./projects.module.css"
 
 export default function Projects() {
   return (
-    <Section id="projects" title="Projets" className={`${styles.projects} reveal `}>
+    <Section id="projects" title="Projets" className={`${styles.projects}`}>
       <section className={styles.projectsContainer}>
         {projects.map((p) => <ProjectCard key={p.title} project={p} />)}
         

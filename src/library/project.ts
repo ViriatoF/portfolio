@@ -3,7 +3,7 @@ import { _Project } from "../types/projectsType";
 export const projects: _Project[] = [
   {
     image: "/projects/portfolio.png",
-    title: "Portfolio",
+    title: "Portfolio V1.0.0",
     stack: ["NextJs", "CSS", "GSap"],
     codeUrl: "https://github.com/ViriatoF/Portfolio"
   },
