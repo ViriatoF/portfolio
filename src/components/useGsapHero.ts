@@ -16,8 +16,9 @@ export default function useGsapHero(){
     const ctx = gsap.context(() => {
       gsap.from('.hero-line', { y: 20, opacity: 0, duration: 0.6, stagger: 0.1 });
       gsap.from('.socialButtons', { y: 10, opacity: 0, duration: 0.5, delay: 0.2 });
+      gsap.from('.socialPic', { x: 200, opacity: 0, duration: 0.5, delay: 0.2 });
 
-      // Reveal any .reveal inside sections when they enter viewport
+      //Reveal any .reveal inside sections when they enter viewport
       gsap.utils.toArray<HTMLElement>('.reveal').forEach((el) => {
         gsap.from(el, {
           opacity: 0,

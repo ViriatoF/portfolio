@@ -25,6 +25,7 @@ export default function Hero() {
 						alt={"Picture of Viriato FERREIRA, french front-end developper"}
 						width={250}
 						height={250}
+            className="socialPic"
 					/>
       </section>
       <section  id="socialButtons" className={`${styles.socialButtons} socialButtons`}>

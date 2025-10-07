@@ -34,14 +34,14 @@ export default function ProjectCard({ project } : { project: _Project }) {
           {project.codeUrl?  <Link
 								href={project.codeUrl!}
 								target="_blank"
-                aria-label="Lien vers le code Github"
+                aria-label={`Lien vers le code Github de ${project.title}`}
 							>
 								<FaGithub />
 					</Link> : '' }
           {project.websiteUrl? <Link
 								href={project.websiteUrl!}
 								target="_blank"
-                aria-label="Lien vers le site"
+                aria-label={`Lien vers le site web de ${project.title}`}
 							>
 								<FaEye />
 					</Link>: ''}

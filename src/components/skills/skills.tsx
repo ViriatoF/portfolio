@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Skills() {
   return (
-    <Section id="skills" title="Mes compétences" className={`${styles.skills} reveal`}>
+    <Section id="skills" title="Mes compétences" className={`${styles.skills}`}>
       <section className={styles.skillsContainer}>
 
         <section className={styles.front}>
@@ -29,6 +29,10 @@ export default function Skills() {
             <figcaption>NodeJS</figcaption>
           </figure>
           <figure>
+            <Image src="/technos/typescript.svg" width={200} height={200} alt=""/>
+            <figcaption>Typescript</figcaption>
+          </figure>
+          <figure>
             <Image src="/technos/express.svg" width={200} height={200} alt=""/>
             <figcaption>ExpressJS</figcaption>
           </figure>
@@ -47,12 +51,12 @@ export default function Skills() {
             <figcaption>VSCode</figcaption>
           </figure>
           <figure>
-            <Image src="/technos/figma-icon.svg" width={200} height={200} alt=""/>
-            <figcaption>Figma</figcaption>
-          </figure>
-          <figure>
             <Image src="/technos/git-icon.svg" width={200} height={200} alt=""/>
             <figcaption>Git</figcaption>
+          </figure>
+          <figure>
+            <Image src="/technos/figma-icon.svg" width={200} height={200} alt=""/>
+            <figcaption>Figma</figcaption>
           </figure>
         </section>
         <section className={styles.certifs}>
