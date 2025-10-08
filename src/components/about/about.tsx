@@ -7,7 +7,7 @@ export default function About() {
     <Section id="about" title="À propos" className={`${styles.about}`}>
       <div>
         <p>Après de multiples expériences me permettant de gagner en adaptabilité, en aisance relationnelle, en maturité et en organisation, j'ai décidé, à 42 ans, de me tourner
-          vers un secteur qui m'attire depuis mon plus jeune age:
+          vers un secteur qui m'attire depuis mon plus jeune âge:
         </p>
       </div>
       <div>
