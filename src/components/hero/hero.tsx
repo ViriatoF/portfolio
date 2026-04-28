@@ -1,20 +1,17 @@
 'use client';
 
-import Link from "next/link";
-import styles from "./hero.module.css"
-import { FaGithub, FaLinkedinIn } from "react-icons/fa6";
-import { IoMailOutline } from "react-icons/io5";
-import { SiCodewars } from "react-icons/si";
-import { FaCloudDownloadAlt } from "react-icons/fa";
-import Image from "next/image";
-import useGsapHero from "../useGsapHero";
-
+import Link from 'next/link';
+import styles from './hero.module.css';
+import { FaGithub, FaLinkedinIn } from 'react-icons/fa6';
+import { IoMailOutline } from 'react-icons/io5';
+import { SiCodewars } from 'react-icons/si';
+import { FaCloudDownloadAlt } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function Hero() {
-  const ref= useGsapHero();
   return (
     <>
-    <section id="home" ref={ref} aria-label="Accueil" className={`${styles.home} reveal`} >
+      {/* <section id="home" ref={ref} aria-label="Accueil" className={`${styles.home} reveal`} >
       <section>
         <div className="hero-line" id={styles.heroline}>
           <h1>Viriato FERREIRA</h1>
@@ -35,8 +32,7 @@ export default function Hero() {
 				<Link href={"https://www.codewars.com/users/ViriatoF"} target="_blank" className={styles.btn}><SiCodewars /> Codewars</Link>
 				<Link href={"CV_Viriato_FERREIRA.pdf"} download="CV_Viriato_FERREIRA.pdf" className={styles.btn}><FaCloudDownloadAlt /> CV</Link>
 			</section>
-    </section>
-    
+    </section> */}
     </>
-  )
+  );
 }

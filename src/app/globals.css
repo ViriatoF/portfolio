@@ -1,12 +1,23 @@
 :root {
-  --text: #0d3c48;
-  --links: #107d98;
-  --background: #fafdfe;
-  --border: #3db9cf;
-  --card: #f2fafb;
-  --button: #0797b9;
-  --button-hover: #3db9cf;
-  --labels: #b5e9f0;
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --tertiary-color: #a858b0;
+
+  /* Mobile */
+  --text-courant-m: 1rem;
+  --h1-m: 2.488rem;
+  --h2-m: 2.074rem;
+  --h3-m: 1.728rem;
+  --h4-m: 1.44rem;
+  --small-text-m: 0.833rem;
+
+  /* Desktop */
+  --text-courant: 1rem;
+  --h1: 3.052rem;
+  --h2: 2.441rem;
+  --h3: 1.953rem;
+  --h4: 1.563rem;
+  --small-text: 0.8rem;
 }
 
 *,
@@ -21,41 +32,11 @@ html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
+  font-size: var(--text-courant);
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-header,
-main,
-footer {
-  display: flex;
-}
-
-main {
-  flex-direction: column;
-  justify-content: space-around;
-  gap: 15em;
-  align-items: center;
-  max-width: 100vw;
-  margin: 10em auto;
-  padding: 0 16px;
-}
-
-ul {
-  list-style-type: none;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 h1,
@@ -65,56 +46,41 @@ h3 {
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: var(--h1);
 }
 
 h2 {
-  font-family: var(--font-permanent-marker);
-  font-size: 2rem;
+  font-size: var(--h2);
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: var(--h3);
 }
 
 h4 {
-  font-size: 1.375rem;
-}
-
-span {
-  font-family: var(--font-permanent-marker);
-  font-size: 32px;
-}
-
-mark {
-  font-family: var(--font-permanent-marker);
+  font-size: var(--h4);
 }
 
 @media (max-width: 720px) {
+  body {
+    font-size: var(--text-courant-m);
+  }
+
   h1 {
-    font-size: 1.87rem;
+    font-size: var(--h1-m);
     text-align: center;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: var(--h2-m);
   }
 
   h3 {
-    font-size: 1.25rem;
+    font-size: var(--h3-m);
   }
 
   h4 {
-    font-size: 1.125rem;
-  }
-
-  span {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-
-  mark {
-    text-align: center;
+    font-size: var(--h4-m);
   }
 }
 
@@ -127,15 +93,11 @@ mark {
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #b6ecf7;
-    --links: #4ccce6;
-    --background: #0b161a;
-    --border: #04546c;
-    --card: #101b20;
-    --button: #23afd0;
-    --button-hover: #00a2c7;
-    --labels: #004558;
+    --primary-color: #3b82f6;
+    --secondary-color: #10b981;
+    --tertiary-color: #a858b0;
   }
+
   body {
     background-color: var(--background);
     color: var(--text);
