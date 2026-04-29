@@ -6,28 +6,7 @@ import { useEffect, useState } from 'react';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
 import Link from 'next/link';
-
-const links = [
-  {
-    href: '#top',
-    icon: <HiHome />,
-    label: 'Accueil',
-  },
-  {
-    href: '#about',
-    icon: <HiMiniUser />,
-    label: 'À propos',
-  },
-  {
-    href: '#projects',
-    icon: <MdOutlineWorkOutline />,
-    label: 'Projets',
-  },
-  {
-    href: '#skills',
-    label: 'Compétences',
-  },
-];
+import { button } from 'framer-motion/client';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -42,7 +21,7 @@ export default function Header() {
     <>
       <header className={styles.header}>
         <a className={styles.brand} href="#top" aria-label="Aller à l’accueil">
-          <svg
+          {/* <svg
             xmlns="http://www.w3.org/2000/svg"
             aria-label="logo de viriato ferreira"
             width="50"
@@ -196,7 +175,8 @@ export default function Header() {
                 </g>
               </g>
             </g>
-          </svg>
+          </svg> */}
+          Viriato FERREIRA
         </a>
         <nav className={styles.nav} aria-label="Navigation principale">
           <button
@@ -211,21 +191,33 @@ export default function Header() {
             id="menu"
             className={`${styles.menu} ${open ? styles.menuOpen : ''}`}
           >
-            {links.map((l) => (
-              <li key={l.href}>
-                <Link
-                  href={l.href}
-                  aria-current={l.href.slice(1) ? 'page' : undefined}
-                  onClick={() =>
-                    setTimeout(() => {
-                      setOpen(!open);
-                    }, 800)
-                  }
-                >
-                  {l.label}
-                </Link>
-              </li>
-            ))}
+            <li>
+              <Link href="#about" onClick={() =>
+                  setTimeout(() => {
+                    setOpen(!open);
+                  }, 800)
+                }>
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="#portfolio" onClick={() =>
+                  setTimeout(() => {
+                    setOpen(!open);
+                  }, 800)
+                }>
+                Portfolio
+              </Link>
+            </li>
+            <li>
+              <Link href="#contact" onClick={() =>
+                  setTimeout(() => {
+                    setOpen(!open);
+                  }, 800)
+                }>
+                Contact
+              </Link>
+            </li>
           </ul>
         </nav>
       </header>

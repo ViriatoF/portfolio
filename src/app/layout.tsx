@@ -30,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${inter.variable} ${space.variable}`}>
-        {children}
-      </body>
+      <body className={`${inter.variable} ${space.variable}`}>{children}</body>
     </html>
   );
 }
