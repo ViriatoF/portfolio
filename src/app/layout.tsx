@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
-import { Roboto, Permanent_Marker } from 'next/font/google';
+import { Inter, Space_Grotesk } from 'next/font/google';
 import './globals.css';
 
-const roboto = Roboto({
-  variable: '--font-roboto',
+const inter = Inter({
+  variable: '--font-inter',
   subsets: ['latin'],
 });
 
-const marker = Permanent_Marker({
-  variable: '--font-permanent-marker',
+const space = Space_Grotesk({
+  variable: '--font-space-grotesk',
   subsets: ['latin'],
   weight: '400',
 });
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${roboto.variable} ${marker.variable}`}>
+      <body className={`${inter.variable} ${space.variable}`}>
         {children}
       </body>
     </html>
