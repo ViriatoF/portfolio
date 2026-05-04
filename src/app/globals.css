@@ -1,26 +1,17 @@
 :root {
   --background-color: #fdfdfe;
   --primary-color: #1d2e5c;
-  --secondary-color: #10b981;
-  --tertiary-color: #3d63dd;
-  --quaternary-color: #bdd1ff;
+  --accent: #2ad23a;
+  --secondary-color: #3d63dd;
+  --tertiary-color: #bdd1ff;
   --neutral-color: #efeded;
 
-  /* Desktop */
   --text-courant: 1rem;
-  --h1: 3.052rem;
-  --h2: 2.441rem;
-  --h3: 1.953rem;
-  --h4: 1.563rem;
-  --small-text: 0.8rem;
-
-  /* Mobile */
-  --text-courant-m: 1rem;
-  --h1-m: 2.488rem;
-  --h2-m: 2.074rem;
-  --h3-m: 1.728rem;
-  --h4-m: 1.44rem;
-  --small-text-m: 0.833rem;
+  --h1: 2.488rem;
+  --h2: 2.074rem;
+  --h3: 1.728rem;
+  --h4: 1.44rem;
+  --small-text: 0.833rem;
 
   /* Spacing */
   --xxs-spacing: 0.5em;
@@ -37,6 +28,11 @@
   --radius-m: 16px;
   --radius-l: 24px;
   --radius-xl: 99px;
+
+  /* Weight */
+  --normal: 400;
+  --bold: 700;
+  --bolder: 900;
 }
 
 *,
@@ -47,13 +43,14 @@
   margin: 0;
 }
 
-html,
 body {
-  max-width: 100vw;
   overflow-x: hidden;
   font-family: var(--font-inter);
   font-size: var(--text-courant);
   color: var(--primary-color);
+  background-color: var(--background-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 html {
@@ -64,6 +61,7 @@ h1,
 h2,
 h3 {
   margin: 0;
+  line-height: 1.2;
 }
 
 h1 {
@@ -85,49 +83,49 @@ h4 {
 
 a {
   text-decoration: none;
-  color: black;
+  color: inherit;
 }
 
-@media (max-width: 720px) {
-  body {
-    font-size: var(--text-courant-m);
-  }
-
-  h1 {
-    font-size: var(--h1-m);
-    text-align: center;
-  }
-
-  h2 {
-    font-size: var(--h2-m);
-  }
-
-  h3 {
-    font-size: var(--h3-m);
-  }
-
-  h4 {
-    font-size: var(--h4-m);
+@media (min-width: 720px) {
+  :root {
+    /* Desktop */
+    --text-courant: 1rem;
+    --h1: 3.052rem;
+    --h2: 2.441rem;
+    --h3: 1.953rem;
+    --h4: 1.563rem;
+    --small-text: 0.8rem;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --background-color: #1d2e5c;
-    --primary-color: #3b82f6;
-    --secondary-color: #10b981;
-    --tertiary-color: #a858b0;
+    --primary-color: #fdfdfe;
+    --accent: #2ad23a;
+    --secondary-color: #3d63dd;
+    --tertiary-color: #bdd1ff;
+    --neutral-color: #efeded;
   }
 
   body {
     background-color: var(--background-color);
-    color: var(--text);
+    color: var(--primary-color);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
   }
 }
