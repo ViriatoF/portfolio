@@ -197,7 +197,7 @@ export default function Header() {
                     setOpen(!open);
                   }, 800)
                 }>
-                About
+                A propos
               </Link>
             </li>
             <li>
@@ -215,7 +215,7 @@ export default function Header() {
                     setOpen(!open);
                   }, 800)
                 }>
-                Contact
+                Me contacter
               </Link>
             </li>
           </ul>

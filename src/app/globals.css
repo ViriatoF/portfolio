@@ -1,7 +1,9 @@
 :root {
-  --primary-color: #3b82f6;
+  --background-color: #fdfdfe;
+  --primary-color: #1d2e5c;
   --secondary-color: #10b981;
-  --tertiary-color: #a858b0;
+  --tertiary-color: #3d63dd;
+  --quaternary-color: #bdd1ff;
   --neutral-color: #efeded;
 
   /* Desktop */
@@ -51,6 +53,7 @@ body {
   overflow-x: hidden;
   font-family: var(--font-inter);
   font-size: var(--text-courant);
+  color: var(--primary-color);
 }
 
 html {
@@ -117,13 +120,14 @@ a {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    --background-color: #1d2e5c;
     --primary-color: #3b82f6;
     --secondary-color: #10b981;
     --tertiary-color: #a858b0;
   }
 
   body {
-    background-color: var(--background);
+    background-color: var(--background-color);
     color: var(--text);
   }
 }
